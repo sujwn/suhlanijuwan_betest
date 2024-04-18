@@ -6,14 +6,9 @@ This project is a RESTful Applications and microservices using [ExpressJS](https
 Table of Contents
 -----------------
 - [Features](#features)
-
 - [Prerequisites](#prerequisites)
-
 - [Getting Started](#getting-started)
-
 - [Project Structure](#project-structure)
-
-  
 
 Features
 --------
