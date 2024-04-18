@@ -1,0 +1,36 @@
+version: '3.8'
+
+services:
+  mongo_db:
+    container_name: mongo_suhlanijuwan_betest
+    image: mongo:latest
+    restart: always
+    ports:
+      - "27017:27017"
+    volumes:
+      - mongo_data:/data/db
+    environment:
+      MONGO_INITDB_DATABASE: $MONGODB_NAME
+
+  redis:
+    container_name: redis_suhlanijuwan_betest
+    image: redis:latest
+    restart: always
+    ports:
+      - "6379:6379"
+
+  api:
+    container_name: ms_suhlanijuwan_betest
+    build: .
+    ports:
+      - $NODE_LOCAL_PORT:$NODE_DOCKER_PORT
+    environment:
+      PORT: $NODE_DOCKER_PORT
+    depends_on: 
+      - mongo_db
+      - redis
+    volumes:
+      - .env:/app/.env
+
+volumes:
+  mongo_data: {}
