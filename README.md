@@ -8,7 +8,7 @@ Table of Contents
 - [Features](#features)
 - [Prerequisites](#prerequisites)
 - [Getting Started](#getting-started)
-- [Project Structure](#project-structure)
+- [API Documentation](#api-documentation)
 
 Features
 --------
@@ -18,6 +18,7 @@ Features
 - Request Validation with [Express Validator](https://www.npmjs.com/package/express-validator)
 - [Mongoose](https://www.npmjs.com/package/mongoose) as ODM for [MongoDB](https://www.mongodb.com/)
 - [Redis](https://redis.io/) Caching
+- Unit test using [Mocha](https://mochajs.org/) and [Chai](https://www.chaijs.com/)
 
 Prerequisites
 -------------
@@ -66,6 +67,11 @@ npm run dev
 ```
 
 The application starts at port 5000 by default
+
+#### Unit Testing
+```
+npx mocha
+```
 
 API Documentation
 ---------------
